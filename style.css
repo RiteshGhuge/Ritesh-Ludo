@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+.game-board-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+#board {
+    width: 600px;
+    height: 600px;
+    background-color: #fff;
+    border: 3px solid #000;
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+    position: relative;
+}
+
+/* Player Bases */
+.player-base {
+    position: relative;
+}
+.red-base { grid-area: 1 / 1 / span 6 / span 6; background-color: #ffcccc; }
+.green-base { grid-area: 1 / 10 / span 6 / span 6; background-color: #ccffcc; }
+.yellow-base { grid-area: 10 / 10 / span 6 / span 6; background-color: #ffffcc; }
+.blue-base { grid-area: 10 / 1 / span 6 / span 6; background-color: #ccccff; }
+
+.home {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+    background-color: #fff;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+}
+
+/* Pawns */
+.pawn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute; /* Allows JS to position them on the board */
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+.red-pawn { background-color: red; }
+.green-pawn { background-color: green; }
+.yellow-pawn { background-color: yellow; }
+.blue-pawn { background-color: blue; }
+
+.pawn.movable {
+    box-shadow: 0 0 15px 5px gold;
+    transform: scale(1.1);
+}
+
+/* Path Cells */
+.path-cell {
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.safe-spot::after {
+    content: '★';
+    font-size: 24px;
+    color: #888;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Center Home */
+.center-home {
+    grid-area: 7 / 7 / span 3 / span 3;
+    background: conic-gradient(red 90deg, green 90deg 180deg, yellow 180deg 270deg, blue 270deg);
+}
+
+/* Controls */
+.controls {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.dice {
+    width: 80px;
+    height: 80px;
+    background-color: #f9f9f9;
+    border: 2px solid #333;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 20px auto;
+}
+
+#roll-dice-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+}
+
+#game-message {
+    margin-top: 15px;
+    color: #d9534f;
+    font-weight: bold;
+    min-height: 24px;
+}

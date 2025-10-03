@@ -1,0 +1,14 @@
+{
+  "name": "Ludo Game",
+  "short_name": "Ludo",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "ludo-icon.png", 
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

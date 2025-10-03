@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludo Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <h1>Ludo Game</h1>
+    <div class="game-board-container">
+        <div id="board">
+            <div class="player-base red-base" id="red-base">
+                <div class="home">
+                    <div class="pawn red-pawn" id="red-pawn-1"></div>
+                    <div class="pawn red-pawn" id="red-pawn-2"></div>
+                    <div class="pawn red-pawn" id="red-pawn-3"></div>
+                    <div class="pawn red-pawn" id="red-pawn-4"></div>
+                </div>
+            </div>
+            <div class="player-base green-base" id="green-base">
+                <div class="home">
+                    <div class="pawn green-pawn" id="green-pawn-1"></div>
+                    <div class="pawn green-pawn" id="green-pawn-2"></div>
+                    <div class="pawn green-pawn" id="green-pawn-3"></div>
+                    <div class="pawn green-pawn" id="green-pawn-4"></div>
+                </div>
+            </div>
+            <div class="player-base yellow-base" id="yellow-base">
+                 <div class="home">
+                    <div class="pawn yellow-pawn" id="yellow-pawn-1"></div>
+                    <div class="pawn yellow-pawn" id="yellow-pawn-2"></div>
+                    <div class="pawn yellow-pawn" id="yellow-pawn-3"></div>
+                    <div class="pawn yellow-pawn" id="yellow-pawn-4"></div>
+                </div>
+            </div>
+            <div class="player-base blue-base" id="blue-base">
+                 <div class="home">
+                    <div class="pawn blue-pawn" id="blue-pawn-1"></div>
+                    <div class="pawn blue-pawn" id="blue-pawn-2"></div>
+                    <div class="pawn blue-pawn" id="blue-pawn-3"></div>
+                    <div class="pawn blue-pawn" id="blue-pawn-4"></div>
+                </div>
+            </div>
+
+            <div class="center-home"></div>
+
+            </div>
+
+        <div class="controls">
+            <h2 id="turn-indicator">Red's Turn</h2>
+            <div id="dice" class="dice">?</div>
+            <button id="roll-dice-btn">Roll Dice</button>
+            <p id="game-message"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
